@@ -291,6 +291,18 @@ def single_player():
             break
 
 
+def print_scoreboard(score_board):
+    print("--------------------------------")
+    print("            SCOREBOARD       ")
+    print("--------------------------------")
+
+    players = list(score_board.keys())
+    print("   ", players[0], "    ", score_board[players[0]])
+    print("   ", players[1], "    ", score_board[players[1]])
+
+    print("--------------------------------\n")
+
+
 welcome()
 print("\n")
 option()

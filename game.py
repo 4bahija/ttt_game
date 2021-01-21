@@ -1,4 +1,4 @@
-import pygame as pg,sys
+import pygame as pg, sys
 from pygame.locals import *
 import time
 
@@ -13,6 +13,7 @@ line_color = (10, 10, 10)
 
 TTT = [[None]*3, [None]*3, [None]*3]
 
+
 pg.init()
 fps = 30
 CLOCK = pg.time.Clock()
@@ -20,9 +21,9 @@ screen = pg.display.set_mode((width, height+100), 0, 32)
 pg.display.set_caption("Tic Tac Toe")
 
 
-opening = pg.image.load('tto.png')
-x_img = pg.image.load('x.png')
-o_img = pg.image.load('o.png')
+opening = pg.image.load('images/tto.png')
+x_img = pg.image.load('images/x.png')
+o_img = pg.image.load('images/o.png')
 
 x_img = pg.transform.scale(x_img, (80, 80))
 o_img = pg.transform.scale(o_img, (80, 80))
@@ -57,7 +58,7 @@ def draw_status():
         message = " The Game is a Draw"
 
     font = pg.font.Font(None, 30)
-    text = font.render(message, 1, (255, 255, 255))
+    text = font.render(message, bool(1), (255, 255, 255))
 
     screen.fill((0, 0, 0), (0, 400, 500, 100))
     text_rect = text.get_rect(center=(width/2, 500-50))

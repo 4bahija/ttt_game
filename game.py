@@ -44,3 +44,7 @@ def tictactoemenu():
         single_player()
     else:
         option()
+
+def two_player():
+    board = ["", " ", " ", " ", " ", " ", " ", " ", " ", " "]
+

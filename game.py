@@ -85,3 +85,58 @@ def two_player():
         else:
             return False
 
+    def is_board_full(board):
+        if " " in board:
+            return False
+        else:
+            return True
+
+    while True:
+        os.system("clear")
+        rules()
+        print_board()
+
+        # user 1
+        choice = input("Please choose an empty space for X: ")
+        choice = int(choice)
+        if board[choice] == " ":
+            board[choice] = "X"
+        else:
+            print("Spot already taken")
+            time.sleep(1)
+        # for user 1 to win
+        if is_winner(board, "X"):
+            os.system("clear")
+            rules()
+            print_board()
+            print("USER1 Win")
+            break
+
+        os.system("clear")
+        rules()
+        print_board()
+
+        # check if board is full i.e. a tie
+        if is_board_full(board):
+            print("Tie")
+            break
+
+        choice = input("Please choose an empty space for O: ")
+        choice = int(choice)
+        if board[choice] == " ":
+            board[choice] = "O"
+        else:
+            print("Spot already taken")
+            time.sleep(1)
+        # for user 2 to win
+        if is_winner(board, "O"):
+            os.system("clear")
+            rules()
+            print_board()
+            print("USER2 Win")
+            break
+
+        # check if board is full i.e. a tie
+        if is_board_full(board):
+            print("Tie")
+            break

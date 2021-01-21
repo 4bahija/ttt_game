@@ -48,3 +48,16 @@ def tictactoemenu():
 def two_player():
     board = ["", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 
+    def rules():
+        print("Welcome to TIC TAC TOE")
+        print("This is a two player game where USER 1 is X and USER 2 is O")
+        print("Enter your choice from 1 to 9")
+        print("""
+                1 | 2 | 3
+                ---|---|---
+                4 | 5 | 6
+                ---|---|---
+                7 | 8 | 9
+                """)
+
+
